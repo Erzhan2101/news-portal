@@ -1,9 +1,8 @@
 .loading{
-
-    flex: 1;
-    display: flex;
+   display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 220px;
 }
 
 .atom-spinner, .atom-spinner * {

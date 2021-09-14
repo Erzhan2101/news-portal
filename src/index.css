@@ -21,7 +21,7 @@ a{
     min-height: 100vh;
 }
 
-main{
+.main{
     flex: 1;
 }
 

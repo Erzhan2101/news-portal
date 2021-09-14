@@ -4,7 +4,7 @@ import "./style.css"
 
 const Header = () => {
     return (
-        <header className="header header-container">
+        <header className="header">
             <Link to={'/'} className="logo">News portal V8</Link>
             <div>
                 <ul className="nav-bar">

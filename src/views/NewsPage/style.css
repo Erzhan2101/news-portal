@@ -8,8 +8,8 @@
     grid-template-columns: 1fr 1fr;
     margin: 5px 0;
     grid-gap: 5px;
-    border: 1px solid #aeaeb2;
-
+    border-bottom: 1px solid #aeaeb2;
+    align-items: center;
 }
 
 .newsPage-title {
@@ -25,9 +25,16 @@
     background-color: #333333;
     color: #e2e2e2;
     transition: .3s;
-    margin: 52px 0 0 463px;
+    /*margin: 52px 0 0 463px;*/
 }
 
 .newsPage-btn:hover{
     background-color: #535353;
+}
+
+.img-page{
+    height: 300px;
+    width: 450px;
+    object-fit: cover;
+    margin: 0 auto;
 }

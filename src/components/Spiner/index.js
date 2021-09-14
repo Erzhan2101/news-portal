@@ -9,9 +9,7 @@ const Spinner = () => {
                     <div className="spinner-line"/>
                     <div className="spinner-line"/>
                     <div className="spinner-line"/>
-                    <div className="spinner-circle">
-                        &#9679;
-                    </div>
+                    <div className="spinner-circle">&#9679;</div>
                 </div>
             </div>
         </div>
