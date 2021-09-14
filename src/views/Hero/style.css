@@ -1,6 +1,6 @@
 .hero {
     background: url("https://papers.co/wallpaper/papers.co-be51-lamborghini-car-dark-art-illustration-28-wallpaper.jpg") no-repeat center/cover;
-    padding: 197px 0;
+    padding: 196px 0;
     text-align: center;
 }
 
@@ -16,11 +16,13 @@
 
 .hero-btn:hover {
     background: rgba(245, 245, 247, 0.11);
+
 }
 
 .hero-title {
     font-family: 'Urbanist', sans-serif;
     font-size: 60px;
     color: #f5f5f7;
+    font-weight: 300;
 }
 

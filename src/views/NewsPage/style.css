@@ -1,0 +1,17 @@
+.box{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: #aeaeb2;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(174, 174, 178, 0.27);
+}
+
+.page{
+    padding: 10px 10px 0;
+    background-color: #f5f5f7;
+}
+
+.img-page{
+    border-radius: 5px 0 0 5px;
+}
