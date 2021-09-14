@@ -5,7 +5,6 @@ const Hero = () => {
 
 
     return (
-
             <div className="hero">
                 <div>
                     <h1 className="hero-title">News portal V8</h1>
@@ -14,7 +13,6 @@ const Hero = () => {
                     </Link>
                 </div>
             </div>
-
     );
 };
 

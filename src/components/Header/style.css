@@ -9,10 +9,12 @@ a {
     justify-content: space-between;
     align-items: center;
     color: #f5f5f7;
-
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
-.list{
+.list {
     color: #f5f5f7;
     margin-left: 15px;
     font-family: 'Urbanist', sans-serif;
@@ -21,11 +23,11 @@ a {
     font-weight: 300;
 }
 
-.active{
+.active {
     border-bottom: 1px solid #e2e2e2;
 }
 
-.logo{
+.logo {
     font-family: 'Urbanist', sans-serif;
     font-size: 15px;
     color: #f5f5f7;
