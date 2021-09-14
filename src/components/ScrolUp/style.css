@@ -1,0 +1,15 @@
+.btn-up{
+    bottom: 55px;
+    right: 25px;
+    height: 45px;
+    width: 45px;
+    position: fixed;
+    color: #e2e2e2;
+    background-color: #333333;
+    border: none;
+    transition: .4s;
+}
+
+.btn-up:hover{
+    background-color: #535353;
+}

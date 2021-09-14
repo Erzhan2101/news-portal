@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 import axios from "axios";
 import "./style.css"
 import Spinner from "../../components/Spiner";
+import BtnUp from "../../components/ScrolUp";
 
 const NewsPage = () => {
     const [news, setNews] = useState([])
@@ -35,6 +36,7 @@ const NewsPage = () => {
                         </div>
                 )
             }
+            <BtnUp/>
         </div>
     );
 };
