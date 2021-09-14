@@ -1,0 +1,22 @@
+.newsInfoCart{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.description{
+    text-align: justify;
+}
+
+.newsInfo{
+    flex: 1;
+    padding: 10px;
+}
+
+.comment{
+    font-weight: 300;
+}
+
+.comment span{
+    color: #e2e2e2;
+}

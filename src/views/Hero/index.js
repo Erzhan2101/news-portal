@@ -3,6 +3,8 @@ import "./style.css"
 import {Link} from "react-router-dom";
 
 const Hero = () => {
+
+
     return (
         <main>
             <div className="hero container">
