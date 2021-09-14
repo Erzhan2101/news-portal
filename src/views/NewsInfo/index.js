@@ -26,18 +26,17 @@ const NewsInfo = () => {
     return (
         <div className="newsInfo container">
             <div className="newsInfoCart">
-                <img src={infoCar.image} alt=""/>
+                <img className="newsInfo-img" src={infoCar.image} alt=""/>
                 <div>
-                    <h4>{infoCar.title}</h4>
+                    <h2 className="newsInfo-title">{infoCar.title}</h2>
                     <p className="description">{infoCar.description}</p>
-                    <p>{infoCar.author}<span>{infoCar.date}</span></p>
+                    <p className="newsInfo-author">Автор: {infoCar.author}<span>{infoCar.date}</span></p>
                 </div>
             </div>
             <h3 className="comment">Комментарии</h3>
-            <h4>Олег <span>12.03.2021</span></h4>
-            <p>Машина просто огонь</p>
-            <input type="text" placeholder="Комментарий..."/>
-            <button>Отправить</button>
+            <h4 className="newsInfo-comment">Гость: Олег - <span>"Машина просто огонь &#128293;&#128293;&#128293;"  </span> <span>  12.03.2021</span> </h4>
+            <textarea className="input-comment" rows={7} cols={163} placeholder="Комментарий..."/>
+            <button className="newsInfoBtn">Отправить</button>
         </div>
 
     );
