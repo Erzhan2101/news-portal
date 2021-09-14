@@ -1,11 +1,10 @@
 import React, {useEffect, useState} from 'react';
-import {Link, useParams} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import axios from "axios";
 import "./style.css"
 
 const NewsPage = () => {
     const [news, setNews] = useState([])
-    const params = useParams()
 
     useEffect(() => {
         axios.get("https://613b6b32110e000017a455f9.mockapi.io/api/news")
