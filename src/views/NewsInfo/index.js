@@ -3,25 +3,40 @@ import {useEffect, useState} from "react";
 import {useParams} from "react-router-dom";
 import Spinner from "../../components/Spiner";
 import './style.css'
+import NotFount from "../NotFount";
 
 const NewsInfo = () => {
-
+    const [notFound, setNotFound] = useState(false)
     const [infoCar, setInfoCar] = useState({})
     const [isLoading, setIsLoading] = useState(true)
     const {id} = useParams()
 
+    // useEffect(() => {
+    //     const FetchData = async () =>{
+    //         try {
+    //         const {data} = await axios(`https://613b6b32110e000017a455f9.mockapi.io/api/news/${id}`)
+    //             setInfoCar(data)
+    //         }catch (e) {
+    //             setNotFound(true)
+    //         }finally {
+    //             setIsLoading(false)
+    //         }
+    //     }
+    //         FetchData()
+    // }, [id])
+
     useEffect(() => {
-        axios.get(`https://613b6b32110e000017a455f9.mockapi.io/api/news/${id}`)
-            .then(({data}) =>{
-                setInfoCar(data)
-                setIsLoading(false)
-            })
-
+        axios(`https://613b6b32110e000017a455f9.mockapi.io/api/news/${id}`)
+            .then(({data}) => setInfoCar(data))
+            .catch(() => setNotFound(true))
+            .finally(() => setIsLoading(false))
     }, [id])
-
+    
 
     if (isLoading) {
         return <Spinner />
+    }if(notFound){
+        return <NotFount/>
     }
     return (
         <div className="newsInfo container">

@@ -6,12 +6,10 @@ const Hero = () => {
 
     return (
             <div className="hero">
-                <div>
                     <h1 className="hero-title">News portal V8</h1>
                     <Link to='/sing-in'>
                         <button className="hero-btn">Зарегистироваться</button>
                     </Link>
-                </div>
             </div>
     );
 };

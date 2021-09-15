@@ -25,11 +25,6 @@ a{
     flex: 1;
 }
 
-img{
-    height: 100%;
-    width: 100%;
-}
-
 body{
     font-family: 'Urbanist', sans-serif;
     background-color: #e8e7e7;

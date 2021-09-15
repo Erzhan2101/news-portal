@@ -1,8 +1,14 @@
 .hero {
     background: url("https://papers.co/wallpaper/papers.co-be51-lamborghini-car-dark-art-illustration-28-wallpaper.jpg") no-repeat center/cover;
-    padding: 196px 0;
-    text-align: center;
-    margin-top: 38px;
+    /*padding: 196px 0;*/
+    /*text-align: center;*/
+    /*margin-top: 38px;*/
+    height: 877px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
 }
 
 .hero-btn {
