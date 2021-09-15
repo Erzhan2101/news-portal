@@ -1,27 +1,27 @@
-import React, {useEffect, useState} from 'react';
+// import React, {useEffect, useState} from 'react';
 import "./style.css"
-import axios from "axios";
-import Spinner from "../../components/Spiner";
-import NotFount from "../NotFount";
-import Carousel from 'react-bootstrap/Carousel'
+// import axios from "axios";
+// import Spinner from "../../components/Spiner";
+// import NotFount from "../NotFount";
+// import Carousel from 'react-bootstrap/Carousel'
 import {Link} from "react-router-dom";
 
 
 const Hero = () => {
-    const [hero, setHero] = useState([])
-    const [isLoading, setIsLoading] = useState(true)
-    const [notFound, setNotFound] = useState(false)
-
-    useEffect(() => {
-        axios("https://613b6b32110e000017a455f9.mockapi.io/api/news")
-            .then(({data}) => setHero(data))
-            .catch(() => setNotFound(true))
-            .finally(() => setIsLoading(false))
-    }, [])
-
-
-    if (isLoading) {return <Spinner/>}
-    if (notFound) {return <NotFount/>}
+    // const [hero, setHero] = useState([])
+    // const [isLoading, setIsLoading] = useState(true)
+    // const [notFound, setNotFound] = useState(false)
+    //
+    // useEffect(() => {
+    //     axios("https://613b6b32110e000017a455f9.mockapi.io/api/news")
+    //         .then(({data}) => setHero(data))
+    //         .catch(() => setNotFound(true))
+    //         .finally(() => setIsLoading(false))
+    // }, [])
+    //
+    //
+    // if (isLoading) {return <Spinner/>}
+    // if (notFound) {return <NotFount/>}
     return (
         // <Carousel fade
         //           className="my-md-3"
