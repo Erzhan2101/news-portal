@@ -1,0 +1,24 @@
+@media (max-width: 1200px) {
+    .box-sing {
+        width: 310px;
+    }
+
+    .regis-box {
+        width: 310px;
+    }
+
+    .input-comment {
+        width: 100%;
+    }
+}
+
+@media (max-width: 992px) {
+    .newsPage-title {
+        font-size: 23px;
+        margin: unset;
+    }
+
+    .newsInfoBtn{
+        margin-left: 86.9%;
+    }
+}
