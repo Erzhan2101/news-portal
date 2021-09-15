@@ -11,19 +11,7 @@ const NewsInfo = () => {
     const [isLoading, setIsLoading] = useState(true)
     const {id} = useParams()
 
-    // useEffect(() => {
-    //     const FetchData = async () =>{
-    //         try {
-    //         const {data} = await axios(`https://613b6b32110e000017a455f9.mockapi.io/api/news/${id}`)
-    //             setInfoCar(data)
-    //         }catch (e) {
-    //             setNotFound(true)
-    //         }finally {
-    //             setIsLoading(false)
-    //         }
-    //     }
-    //         FetchData()
-    // }, [id])
+
 
     useEffect(() => {
         axios(`https://613b6b32110e000017a455f9.mockapi.io/api/news/${id}`)
