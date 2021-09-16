@@ -1,6 +1,17 @@
-.admin-safe{
+.admin-safe {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap:10px ;
     border: 1px solid black;
+    padding: 10px;
+    margin-top: 70px;
+}
+
+.data {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    border-bottom: 1px solid black;
+    display: grid;
+    justify-content: space-between;
+    padding: 10px;
 }

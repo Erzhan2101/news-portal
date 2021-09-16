@@ -37,7 +37,7 @@ const NewsInfo = () => {
                 </div>
             </div>
             <h3 className="comment">Комментарии</h3>
-            <h4 className="newsInfo-comment">Гость: Олег - <span>"Машина просто огонь &#128293;&#128293;&#128293;"  </span> <span>  12.03.2021</span> </h4>
+            <h4 className="newsInfo-comment">Гость: Олег - <span>"Машина просто огонь &#128293;&#128293;&#128293;"  </span> <span>-12.03.2021.</span> </h4>
             <textarea className="input-comment" rows={7} cols={163} placeholder="Комментарий..."/>
             <button className="newsInfoBtn">Отправить</button>
         </div>
