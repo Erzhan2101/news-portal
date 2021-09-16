@@ -21,6 +21,10 @@ a {
     font-weight: 300;
 }
 
+.admin{
+    color: #de6d38;
+}
+
 .active {
     border-bottom: 1px solid #e2e2e2;
 }
@@ -106,4 +110,8 @@ label {
 
 .send-btn:hover{
     background-color: #494848;
+}
+
+.sent{
+    margin: 10px 31px;
 }
