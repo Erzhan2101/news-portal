@@ -34,6 +34,7 @@ const Header = () => {
                     <NavLink to={'/news-page'} className="list">Новости</NavLink>
                     <NavLink to={'/sing-in'} className="list">Войти</NavLink>
                     <NavLink to={'/register'} className="list">Зарегистироваться</NavLink>
+                    <NavLink to={'/students'} className="list">Студенты</NavLink>
                     <NavLink to={'/admin'} className="list admin">Админ</NavLink>
                     <button className="callback" onClick={() => setIsOpen(true)}>Обратный связь</button>
                 </ul>

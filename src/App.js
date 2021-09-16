@@ -7,6 +7,7 @@ import Register from "./views/Register";
 import Layout from "./components/Layout";
 import NotFount from "./views/NotFount";
 import Admin from "./views/Admin";
+import Students from "./views/Students";
 
 function App() {
     return (
@@ -19,6 +20,7 @@ function App() {
                   <Route path="/sing-in"><SingIn/></Route>
                   <Route path='/register'><Register/></Route>
                   <Route path='/admin'><Admin/></Route>
+                  <Route path='/students'><Students/></Route>
                   <Route path='*'><NotFount/></Route>
               </Switch>
             </Layout>
