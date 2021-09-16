@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {Link, NavLink} from "react-router-dom";
 import "./style.css"
+import axios from "axios";
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false)
@@ -12,7 +13,9 @@ const Header = () => {
 
     const Submit = (e) => {
         e.preventDefault()
-        console.log("boom!")
+        console.log(user)
+       axios.post("https://613b6b32110e000017a455f9.mockapi.io/api/callback" , user)
+           .then(() => setIsOpen(false))
     }
 
     const handleChang = (e) => {
