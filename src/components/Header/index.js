@@ -44,7 +44,7 @@ const Header = () => {
                 <div className="modal-window">
                     <div className="modal-content">
                         {
-                           sentSuccess ? <h3 className="sent">Ушспешно отправлено</h3> :
+                           sentSuccess ? <h3 className="sent">Успешно отправлено</h3> :
                                 <>
                                     <h3>Обратный связь</h3>
                                     <form onSubmit={Submit}>
