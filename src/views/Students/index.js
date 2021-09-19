@@ -7,9 +7,9 @@ import './style.css'
 
 const Students = () => {
 
-    const [student, setStudent] = useState([])
+    const [students, setStudents] = useState([])
     const [showModal, setShowModal] = useState(false);
-    const {register, handleSubmit} = useForm()
+    const {register, handleSubmit, formState:{errors}, reset} = useForm()
 
 
     const closeModal = () => {
@@ -17,7 +17,12 @@ const Students = () => {
     }
 
     const sendData = (data) => {
-        alert(JSON.stringify(data))
+        axios.post('https://613b6b32110e000017a455f9.mockapi.io/api/students' ,data)
+            .then(({data:student}) => {
+                setStudents([...students, student])
+                setShowModal(false)
+                reset()
+            })
     }
 
     const customStyles = {
@@ -33,7 +38,7 @@ const Students = () => {
 
     useEffect(() => {
         axios("https://613b6b32110e000017a455f9.mockapi.io/students")
-            .then(({data}) => setStudent(data))
+            .then(({data}) => setStudents(data))
     }, [])
 
     return (
@@ -47,20 +52,23 @@ const Students = () => {
                     <th scope="col">Оплатил</th>
                     <th scope="col">Ноутбук</th>
                     <th scope="col">Группа</th>
-                    <th scope="col">Комментарий</th>
+                    <th scope="col">Статус</th>
+                    <th scope="col">Комментарий</th><th></th>
                 </tr>
                 </thead>
                 <tbody>
                 {
-                    student.map(el =>
+                    students.map(el =>
                         <tr>
                             <td>{el.name}</td>
                             <td>{el.phone}</td>
-                            <td>{el.sum}</td>
+                            <td>{el.sum} $</td>
                             <td>{el.paid}</td>
                             <td>{el.notebook}</td>
                             <td>{el.group}</td>
+                            <td className='status'>{el.status}</td>
                             <td>{el.comment}</td>
+
                         </tr>
                     )
                 }
@@ -78,41 +86,47 @@ const Students = () => {
                     <h3>Заполните бланк</h3>
                     <div className="info-user">
                         <div>
-                            <label htmlFor='name'>Имя</label>
-                            <input className={"w-100 border border-dark"} type="text" id="name" {...register("name")}/>
+                            <label htmlFor='name'><b>Имя</b></label>
+                            <input className={"w-100 border border-dark"} type="text" id="name" {...register("name" , {required: true})}/>
+                            {errors.name && <div className="error-color">Обязательное поле !</div>}
                         </div>
                         <div>
-                            <label htmlFor='phone'>Телефон</label>
-                            <input className={"w-100 border border-dark"} type="text" id="phone" {...register("phone")}/>
+                            <label htmlFor='phone'><b>Телефон</b></label>
+                            <input className={"w-100 border border-dark"} type="text" id="phone" {...register("phone", {required: true})}/>
+                            {errors.phone && <div className="error-color">Обязательное поле !</div>}
                         </div>
                         <div>
-                            <label htmlFor='sum'>Сумма контракта</label>
-                            <input className={"w-100 border border-dark"} type="text" id="sum" {...register("sum")}/>
+                            <label htmlFor='sum'><b>Сумма контракта</b></label>
+                            <input className={"w-100 border border-dark"} type="text" id="sum" {...register("sum", {required: true})}/>
+                            {errors.sum && <div className="error-color">Обязательное поле !</div>}
                         </div>
                         <div>
-                            <label htmlFor='paid'>Оплатил</label>
-                            <input className={"w-100 border border-dark"} type="text" id="paid" {...register("paid")}/>
+                            <label htmlFor='paid'><b>Оплатил</b></label>
+                            <input className={"w-100 border border-dark"} type="text" id="paid" {...register("paid", {required: true})}/>
+                            {errors.paid && <div className="error-color">Обязательное поле !</div>}
                         </div>
                     </div>
-                    <label htmlFor="notebook" className="mt-3">Ноутбук</label>
-                    <input type="text" className="notebook w-100 border border-dark" id="notebook" {...register("notebook")}/>
+                    <label htmlFor="notebook" className="mt-3"><b>Ноутбук</b></label>
+                    <input type="text" className="notebook w-100 border border-dark" id="notebook" {...register("notebook", {required: true})}/>
+                    {errors.notebook && <div className="error-color">Обязательное поле !</div>}
                     <div>
-                        <p className="mt-3">Выбирите группу</p>
-                        <select className="form-select border border-dark" aria-label="Default select example" >
-                            <option value="1">Перевый</option>
-                            <option value="2">Второй</option>
-                            <option value="3">Третий</option>
+                        <label htmlFor="group"><b>Выбирите группу</b></label>
+                        <select {...register('group', {required: true})} className="form-select border border-dark" aria-label="Default select example" >
+                            <option selected>Выберите группу</option>
+                            <option value="1">Утренный</option>
+                            <option value="2">Вечерный</option>
                         </select>
-                            <p className="mt-3">Выбирите статус</p>
-                        <select className="form-select border border-dark" aria-label="Default select example">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
+                        {/*{errors.group && <div className="error-color">Обязательное поле !</div>}*/}
+                        <label htmlFor='status'><b>Выбирите статус</b></label>
+                        <select {...register('status', {required: true})} className="form-select border border-dark" aria-label="Default select example">
+                            <option selected>Выберите статус</option>
+                            <option value="actions" >actions</option>
                         </select>
+                        {/*{errors.status && <div className="error-color">Обязательное поле !</div>}*/}
                     </div>
                     <div className="form-floating">
-                        <p className="mt-3">Введите комментарий</p>
-                        <textarea className="form-control mt-3 border border-dark" id="floatingTextarea"/>
+                        <textarea {...register('comment', {required:true})} className="form-control mt-3 border border-dark" id="floatingTextarea"/>
+                        <label htmlFor="floatingTextarea"><b>Комментарий...</b></label>
                     </div>
                     <button className="d-block ms-auto btn btn-secondary mt-3">Добавить</button>
                 </form>

@@ -1,7 +1,13 @@
-.info-user{
+.info-user {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
 }
 
+.error-color {
+    color: #c90404;
+}
 
+.status {
+    border: 1px solid #176f04;
+}
