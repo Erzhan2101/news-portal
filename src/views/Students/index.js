@@ -53,6 +53,7 @@ const Students = () => {
                     <th scope="col">Оплатил:</th>
                     <th scope="col">Ноутбук:</th>
                     <th scope="col">Группа:</th>
+                    <th scope="col">Пол:</th>
                     <th scope="col">Статус:</th>
                     <th scope="col">Комментарий:</th>
                 </tr>
@@ -68,6 +69,7 @@ const Students = () => {
                             <td>{el.paid}</td>
                             <td>{el.notebook}</td>
                             <td>{el.group}</td>
+                            <td>{el.gender}</td>
                             <td className='status'>{el.status}</td>
                             <td>{el.comment}</td>
 
@@ -111,20 +113,31 @@ const Students = () => {
                     <label htmlFor="notebook" className="mt-3"><b>Ноутбук</b></label>
                     <input type="text" className="notebook w-100 border border-dark" id="notebook" {...register("notebook", {required: true})}/>
                     {errors.notebook && <div className="error-color">Обязательное поле ⚠</div>}
-                    <div>
-                        <label htmlFor="group"><b>Выбирите группу</b></label>
-                        <select {...register('group', {required: true})} className="form-select border border-dark" aria-label="Default select example" >
-                            <option selected>Выберите группу</option>
-                            <option value="1">Утренный</option>
-                            <option value="2">Вечерный</option>
-                        </select>
-                        {/*{errors.group && <div className="error-color">Обязательное поле !</div>}*/}
-                        <label htmlFor='status'><b>Выбирите статус</b></label>
-                        <select {...register('status', {required: true})} className="form-select border border-dark" aria-label="Default select example">
-                            <option selected>Выберите статус</option>
-                            <option value="actions" >actions</option>
-                        </select>
-                        {/*{errors.status && <div className="error-color">Обязательное поле !</div>}*/}
+                    <div className="select">
+                        <div>
+                            <label htmlFor="group"><b>Выбирите группу</b></label>
+                            <select {...register('group', {required: true})} className="form-select border border-dark" aria-label="Default select example" >
+                                <option selected>Выберите группу</option>
+                                <option value="Утренный">Утренный</option>
+                                <option value="Вечерный">Вечерный</option>
+                            </select>
+                        </div>
+                   <div>
+                       <label htmlFor="gender"><b>Выбирите пол</b></label>
+                       <select {...register('gender', {required: true})} className="form-select border border-dark" aria-label="Default select example" >
+                           <option selected>Выберите пол</option>
+                           <option value="Муж.">Муж.</option>
+                           <option value="Жен.">Жен.</option>
+                       </select>
+                   </div>
+
+                      <div>
+                          <label htmlFor='status'><b>Выбирите статус</b></label>
+                          <select {...register('status', {required: true})} className="form-select border border-dark" aria-label="Default select example">
+                              <option selected>Выберите статус</option>
+                              <option value="actions" >actions</option>
+                          </select>
+                      </div>
                     </div>
                     <div className="form-floating">
                         <textarea {...register('comment', {required:true})} className="form-control mt-3 border border-dark" id="floatingTextarea"/>

@@ -11,3 +11,8 @@
 .status {
     border-bottom: 1px solid #176f04;
 }
+
+.select{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
