@@ -6,7 +6,7 @@
 .newsPage {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin: 5px 0;
+    margin: 5px 0 20px;
     grid-gap: 5px;
     border-bottom: 1px solid #aeaeb2;
     align-items: center;

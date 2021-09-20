@@ -1,7 +1,4 @@
 
-
-
-
 .footer{
     padding: 6.5px 20px;
     background-color: #333333;
@@ -12,12 +9,20 @@
 
 .footer-logo{
     font-family: 'Urbanist', sans-serif;
-    font-size: 12px;
+    font-size: 16px;
     color: #aeaeb2;
 }
 
 .site-author{
     font-family: 'Urbanist', sans-serif;
-    font-size: 12px;
+    font-size: 16px;
     color: #aeaeb2;
+}
+
+p{
+margin-bottom: unset;
+}
+
+h3{
+    margin-bottom: unset;
 }

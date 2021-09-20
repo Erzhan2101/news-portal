@@ -1,11 +1,12 @@
 import React from 'react';
 import "./style.css"
+import {Link} from "react-router-dom";
 
 
 const Footer = () => {
     return (
         <footer className="footer">
-            <h3 className="footer-logo">News portal V8</h3>
+            <Link to={"/"} className="footer-logo">News portal V8</Link>
             <p className="site-author">© 2021 Erzhan Taalaibekov</p>
         </footer>
     );

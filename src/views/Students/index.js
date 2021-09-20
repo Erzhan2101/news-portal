@@ -46,6 +46,7 @@ const Students = () => {
             <table className="table my-4">
                 <thead>
                 <tr>
+                    <th>№</th>
                     <th scope="col">Имя</th>
                     <th scope="col">Номер телефона</th>
                     <th scope="col">Сумма контракта</th>
@@ -53,13 +54,14 @@ const Students = () => {
                     <th scope="col">Ноутбук</th>
                     <th scope="col">Группа</th>
                     <th scope="col">Статус</th>
-                    <th scope="col">Комментарий</th><th></th>
+                    <th scope="col">Комментарий</th>
                 </tr>
                 </thead>
                 <tbody>
                 {
-                    students.map(el =>
+                    students.map((el, idx) =>
                         <tr>
+                            <td>{idx + 1}</td>
                             <td>{el.name}</td>
                             <td>{el.phone}</td>
                             <td>{el.sum} $</td>
