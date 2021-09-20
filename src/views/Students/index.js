@@ -47,14 +47,14 @@ const Students = () => {
                 <thead>
                 <tr>
                     <th>№</th>
-                    <th scope="col">Имя</th>
-                    <th scope="col">Номер телефона</th>
-                    <th scope="col">Сумма контракта</th>
-                    <th scope="col">Оплатил</th>
-                    <th scope="col">Ноутбук</th>
-                    <th scope="col">Группа</th>
-                    <th scope="col">Статус</th>
-                    <th scope="col">Комментарий</th>
+                    <th scope="col">Имя:</th>
+                    <th scope="col">Номер телефона:</th>
+                    <th scope="col">Сумма контракта:</th>
+                    <th scope="col">Оплатил:</th>
+                    <th scope="col">Ноутбук:</th>
+                    <th scope="col">Группа:</th>
+                    <th scope="col">Статус:</th>
+                    <th scope="col">Комментарий:</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -90,27 +90,27 @@ const Students = () => {
                         <div>
                             <label htmlFor='name'><b>Имя</b></label>
                             <input className={"w-100 border border-dark"} type="text" id="name" {...register("name" , {required: true})}/>
-                            {errors.name && <div className="error-color">Обязательное поле !</div>}
+                            {errors.name && <div className="error-color">Обязательное поле ⚠</div>}
                         </div>
                         <div>
                             <label htmlFor='phone'><b>Телефон</b></label>
                             <input className={"w-100 border border-dark"} type="text" id="phone" {...register("phone", {required: true})}/>
-                            {errors.phone && <div className="error-color">Обязательное поле !</div>}
+                            {errors.phone && <div className="error-color">Обязательное поле ⚠</div>}
                         </div>
                         <div>
                             <label htmlFor='sum'><b>Сумма контракта</b></label>
                             <input className={"w-100 border border-dark"} type="text" id="sum" {...register("sum", {required: true})}/>
-                            {errors.sum && <div className="error-color">Обязательное поле !</div>}
+                            {errors.sum && <div className="error-color">Обязательное поле ⚠</div>}
                         </div>
                         <div>
                             <label htmlFor='paid'><b>Оплатил</b></label>
                             <input className={"w-100 border border-dark"} type="text" id="paid" {...register("paid", {required: true})}/>
-                            {errors.paid && <div className="error-color">Обязательное поле !</div>}
+                            {errors.paid && <div className="error-color">Обязательное поле ⚠</div>}
                         </div>
                     </div>
                     <label htmlFor="notebook" className="mt-3"><b>Ноутбук</b></label>
                     <input type="text" className="notebook w-100 border border-dark" id="notebook" {...register("notebook", {required: true})}/>
-                    {errors.notebook && <div className="error-color">Обязательное поле !</div>}
+                    {errors.notebook && <div className="error-color">Обязательное поле ⚠</div>}
                     <div>
                         <label htmlFor="group"><b>Выбирите группу</b></label>
                         <select {...register('group', {required: true})} className="form-select border border-dark" aria-label="Default select example" >
