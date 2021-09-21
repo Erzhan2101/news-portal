@@ -64,12 +64,8 @@ const Students = () => {
                 {students.map((el, idx) => <StudentItem key={el.id} el={el} idx={idx}/>)}
                 </tbody>
             </table>
-            <Button onClick={() => setShowModal(true)}/>
-            <Modal
-                isOpen={showModal}
-                onRequestClose={closeModal}
-                style={customStyles}
-            >
+            <Button onClick={() => setShowModal(true)} title='Добавить нового пользователя'/>
+            <Modal isOpen={showModal} onRequestClose={closeModal} style={customStyles}>
                 <form onSubmit={handleSubmit(sendData)}>
                     <h3>Заполните бланк</h3>
                     <div className="info-user">
@@ -136,7 +132,7 @@ const Students = () => {
                                   className="form-control mt-3 border border-dark" id="floatingTextarea"/>
                         <label htmlFor="floatingTextarea"><b>Комментарий...</b></label>
                     </div>
-                    <button className="d-block ms-auto btn btn-secondary mt-3">Добавить</button>
+                    <Button title='Добавить'/>
                 </form>
             </Modal>
         </div>
