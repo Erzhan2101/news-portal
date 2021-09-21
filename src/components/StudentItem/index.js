@@ -11,7 +11,7 @@ const StudentItem = ({el, idx}) => {
             <td className='border-bottom border-secondary'>{el.notebook}</td>
             <td className='border-bottom border-secondary'>{el.group}</td>
             <td className='border-bottom border-secondary'>{el.gender}</td>
-            <td className='status '>{el.status}</td>
+            <td className='border-bottom border-success border-4'>{el.status}</td>
             <td className='border-bottom border-secondary'>{el.comment}</td>
         </tr>
     );
